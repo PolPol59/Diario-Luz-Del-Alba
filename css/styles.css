@@ -5,9 +5,11 @@
   box-sizing: border-box; }
 
 header {
-  padding: 1em 0 1em 0;
   border-bottom: 5px solid black;
-  font-family: "Quicksand", sans-serif; }
+  font-family: "Quicksand", sans-serif;
+  background-image: url(../assets/img/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
   header h1 {
     text-align: center;
     font-size: 3em; }
@@ -18,7 +20,8 @@ header {
     header nav ul li {
       list-style: none;
       font-size: 1.5em;
-      cursor: pointer; }
+      cursor: pointer;
+      font-weight: bolder; }
 
 main {
   font-family: "Quicksand", sans-serif;
@@ -26,30 +29,74 @@ main {
   main .fecha {
     padding: 1em 0 1em 0;
     font-size: 1em; }
-  main section .articulo-1, main section .articulo-2, main section .articulo-4, main section .articulo-3 {
-    border-bottom: 5px solid black;
-    border-top: 5px solid black; }
-    main section .articulo-1 h1, main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-3 h1 {
-      font-size: 2.5em; }
-    main section .articulo-1 h2, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-3 h2 {
-      font-weight: bolder; }
-    main section .articulo-1 img, main section .articulo-2 img, main section .articulo-4 img, main section .articulo-3 img {
-      width: 30em;
-      cursor: pointer; }
-    main section .articulo-1 p, main section .articulo-2 p, main section .articulo-4 p, main section .articulo-3 p, main section .articulo-1 .link, main section .articulo-2 .link, main section .articulo-4 .link, main section .articulo-3 .link {
-      font-size: 1.5em; }
-    main section .articulo-1 .link, main section .articulo-2 .link, main section .articulo-4 .link, main section .articulo-3 .link {
-      color: #0000EE;
-      text-decoration: underline; }
-  main section .articulo-2, main section .articulo-4 {
-    margin-top: 2em; }
-    main section .articulo-2 div, main section .articulo-4 div {
+  main section {
+    border-top: 5px solid black;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "articulo-1 clima" "articulo-2 noticias" "articulo-3 noticias" "articulo-4 noticias" "anuncios ."; }
+    main section .articulo-1, main section .articulo-2, main section .articulo-4, main section .articulo-3 {
+      border-bottom: 5px solid black;
+      border-top: 5px solid black;
+      border-right: 5px solid black;
+      grid-area: articulo-1;
       display: flex;
-      justify-content: end;
-      cursor: pointer; }
-    main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-2 p, main section .articulo-4 p, main section .articulo-2 .link, main section .articulo-4 .link {
-      text-align: end; }
-    main section .articulo-2 h2, main section .articulo-4 h2 {
-      font-weight: bolder; }
-  main section .articulo-3 {
-    margin-top: 2em; }
+      flex-direction: column;
+      align-items: center;
+      align-self: center; }
+      main section .articulo-1 h1, main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-3 h1 {
+        font-size: 2.5em; }
+      main section .articulo-1 h2, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-3 h2 {
+        font-weight: bolder;
+        text-align: center; }
+      main section .articulo-1 img, main section .articulo-2 img, main section .articulo-4 img, main section .articulo-3 img {
+        width: 30em;
+        cursor: pointer; }
+      main section .articulo-1 p, main section .articulo-2 p, main section .articulo-4 p, main section .articulo-3 p, main section .articulo-1 .link, main section .articulo-2 .link, main section .articulo-4 .link, main section .articulo-3 .link {
+        font-size: 1.5em;
+        text-align: center; }
+      main section .articulo-1 .link, main section .articulo-2 .link, main section .articulo-4 .link, main section .articulo-3 .link {
+        color: #0000EE;
+        text-decoration: underline; }
+    main section .articulo-2, main section .articulo-4 {
+      margin-top: 2em;
+      grid-area: articulo-2; }
+      main section .articulo-2 div, main section .articulo-4 div {
+        display: flex;
+        justify-content: end;
+        cursor: pointer;
+        width: 30em; }
+      main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-2 p, main section .articulo-4 p, main section .articulo-2 .link, main section .articulo-4 .link {
+        text-align: end; }
+      main section .articulo-2 h2, main section .articulo-4 h2 {
+        font-weight: bolder; }
+    main section .articulo-3 {
+      margin-top: 2em;
+      grid-area: articulo-3; }
+    main section .articulo-4 {
+      grid-area: articulo-4; }
+    main section .clima {
+      grid-area: clima;
+      flex-direction: column;
+      display: flex;
+      align-self: center;
+      align-items: center; }
+      main section .clima h1 {
+        font-size: 2.5em;
+        text-decoration: underline; }
+    main section .noticias {
+      display: flex;
+      flex-direction: column;
+      grid-area: noticias; }
+      main section .noticias h1 {
+        font-size: 2.5em;
+        text-decoration: underline;
+        text-align: center; }
+      main section .noticias h2 {
+        color: red;
+        margin-top: 5em;
+        text-align: center;
+        cursor: pointer; }
+  main .anuncios {
+    grid-area: anuncios;
+    flex-direction: row; }

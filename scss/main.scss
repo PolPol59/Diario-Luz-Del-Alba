@@ -3,18 +3,34 @@ main {
     padding: 0 1em 0 1em;
         .fecha {
             padding: $padding;
-            font-size: 1em;    
+            font-size: 1em;
         }
 
     section {
+        border-top: $borde;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: "articulo-1 clima"
+                             "articulo-2 noticias"
+                             "articulo-3 noticias"
+                             "articulo-4 noticias"
+                             "anuncios .";
         .articulo-1 {
             border-bottom: $borde;
             border-top: $borde;
+            border-right: $borde;
+            grid-area: articulo-1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
             h1 {
-                font-size: 2.5em;
+                font-size: $title-size;
             }
             h2 {
                 font-weight: bolder;
+                text-align: center;
             }
             img {
                  @include img-size;
@@ -23,6 +39,7 @@ main {
 
             p {
                 font-size: 1.5em;
+                text-align: center;
             }
             .link {
                 @extend p ;
@@ -34,6 +51,7 @@ main {
         .articulo-2 {
             @extend .articulo-1;
             margin-top: 2em;
+            grid-area: articulo-2;
             div {
                 display: flex;
                 justify-content: end;
@@ -51,10 +69,44 @@ main {
         .articulo-3 {
             @extend .articulo-1;
             margin-top: 2em;
+            grid-area: articulo-3
         }
 
         .articulo-4 {
             @extend .articulo-2;
+            grid-area: articulo-4;
+        }
+        .clima {
+            grid-area: clima;
+            flex-direction: column;
+            display: flex;
+            align-self: center;
+            align-items: center;
+            h1 {
+                font-size: $title-size;
+                text-decoration: underline;
+            }
+        }
+        .noticias {
+            display: flex;
+            flex-direction: column;
+            grid-area: noticias;
+            h1 {
+                font-size: $title-size;
+                text-decoration: underline;
+                text-align: center;
+            }
+            h2 {
+                color: red;
+                margin-top: 5em;
+                text-align: center;
+                cursor: pointer;
+            }
         }
     }
-}
+        .anuncios {
+            grid-area: anuncios;
+            flex-direction: row;
+        }
+    }
+    
