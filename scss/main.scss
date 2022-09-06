@@ -1,0 +1,60 @@
+main {
+    font-family: $font;
+    padding: 0 1em 0 1em;
+        .fecha {
+            padding: $padding;
+            font-size: 1em;    
+        }
+
+    section {
+        .articulo-1 {
+            border-bottom: $borde;
+            border-top: $borde;
+            h1 {
+                font-size: 2.5em;
+            }
+            h2 {
+                font-weight: bolder;
+            }
+            img {
+                 @include img-size;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 1.5em;
+            }
+            .link {
+                @extend p ;
+                color: #0000EE;
+                text-decoration: underline;
+            }
+        }
+
+        .articulo-2 {
+            @extend .articulo-1;
+            margin-top: 2em;
+            div {
+                display: flex;
+                justify-content: end;
+                cursor: pointer;
+                @include img-size;
+            }
+            h1, h2, p{
+                text-align: end;
+            }
+            h2 {
+                font-weight: bolder;
+            }
+        }
+
+        .articulo-3 {
+            @extend .articulo-1;
+            margin-top: 2em;
+        }
+
+        .articulo-4 {
+            @extend .articulo-2;
+        }
+    }
+}

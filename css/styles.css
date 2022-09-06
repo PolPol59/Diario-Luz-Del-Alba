@@ -1,4 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+header {
+  padding: 1em 0 1em 0;
+  border-bottom: 5px solid black;
+  font-family: "Quicksand", sans-serif; }
+  header h1 {
+    text-align: center;
+    font-size: 3em; }
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; }
+    header nav ul li {
+      list-style: none;
+      font-size: 1.5em;
+      cursor: pointer; }
+
+main {
+  font-family: "Quicksand", sans-serif;
+  padding: 0 1em 0 1em; }
+  main .fecha {
+    padding: 1em 0 1em 0;
+    font-size: 1em; }
+  main section .articulo-1, main section .articulo-2, main section .articulo-4, main section .articulo-3 {
+    border-bottom: 5px solid black;
+    border-top: 5px solid black; }
+    main section .articulo-1 h1, main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-3 h1 {
+      font-size: 2.5em; }
+    main section .articulo-1 h2, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-3 h2 {
+      font-weight: bolder; }
+    main section .articulo-1 img, main section .articulo-2 img, main section .articulo-4 img, main section .articulo-3 img {
+      width: 30em;
+      cursor: pointer; }
+    main section .articulo-1 p, main section .articulo-2 p, main section .articulo-4 p, main section .articulo-3 p, main section .articulo-1 .link, main section .articulo-2 .link, main section .articulo-4 .link, main section .articulo-3 .link {
+      font-size: 1.5em; }
+    main section .articulo-1 .link, main section .articulo-2 .link, main section .articulo-4 .link, main section .articulo-3 .link {
+      color: #0000EE;
+      text-decoration: underline; }
+  main section .articulo-2, main section .articulo-4 {
+    margin-top: 2em; }
+    main section .articulo-2 div, main section .articulo-4 div {
+      display: flex;
+      justify-content: end;
+      cursor: pointer; }
+    main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-2 p, main section .articulo-4 p, main section .articulo-2 .link, main section .articulo-4 .link {
+      text-align: end; }
+    main section .articulo-2 h2, main section .articulo-4 h2 {
+      font-weight: bolder; }
+  main section .articulo-3 {
+    margin-top: 2em; }
