@@ -27,6 +27,7 @@ main {
             align-self: center;
             h1 {
                 font-size: $title-size;
+                cursor: pointer;
             }
             h2 {
                 font-weight: bolder;
@@ -45,6 +46,7 @@ main {
                 @extend p ;
                 color: #0000EE;
                 text-decoration: underline;
+                cursor: pointer;
             }
         }
 
@@ -59,7 +61,7 @@ main {
                 @include img-size;
             }
             h1, h2, p{
-                text-align: end;
+                text-align: center;
             }
             h2 {
                 font-weight: bolder;
@@ -97,7 +99,6 @@ main {
                 text-align: center;
             }
             h2 {
-                color: red;
                 margin-top: 5em;
                 text-align: center;
                 cursor: pointer;

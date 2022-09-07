@@ -45,7 +45,8 @@ main {
       align-items: center;
       align-self: center; }
       main section .articulo-1 h1, main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-3 h1 {
-        font-size: 2.5em; }
+        font-size: 2.5em;
+        cursor: pointer; }
       main section .articulo-1 h2, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-3 h2 {
         font-weight: bolder;
         text-align: center; }
@@ -57,7 +58,8 @@ main {
         text-align: center; }
       main section .articulo-1 .link, main section .articulo-2 .link, main section .articulo-4 .link, main section .articulo-3 .link {
         color: #0000EE;
-        text-decoration: underline; }
+        text-decoration: underline;
+        cursor: pointer; }
     main section .articulo-2, main section .articulo-4 {
       margin-top: 2em;
       grid-area: articulo-2; }
@@ -67,7 +69,7 @@ main {
         cursor: pointer;
         width: 30em; }
       main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-2 p, main section .articulo-4 p, main section .articulo-2 .link, main section .articulo-4 .link {
-        text-align: end; }
+        text-align: center; }
       main section .articulo-2 h2, main section .articulo-4 h2 {
         font-weight: bolder; }
     main section .articulo-3 {
@@ -93,7 +95,6 @@ main {
         text-decoration: underline;
         text-align: center; }
       main section .noticias h2 {
-        color: red;
         margin-top: 5em;
         text-align: center;
         cursor: pointer; }
