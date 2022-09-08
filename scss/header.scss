@@ -4,20 +4,24 @@ header {
     background-image: url(../assets/img/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+
     h1 {
         text-align: center;
         font-size: 3em;
     }
-        nav {
-            ul { display: flex;
-                justify-content: map-get($orden, $key:orden2 );
-                flex-direction: row;
-                li {
-                    list-style: none;
-                    font-size: 1.5em;
-                    cursor: pointer;
-                    font-weight: bolder;
-                }
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: map-get($orden, $key: orden2);
+            flex-direction: row;
+
+            li {
+                list-style: none;
+                font-size: 1.5em;
+                cursor: pointer;
+                font-weight: bolder;
             }
         }
     }
+}
