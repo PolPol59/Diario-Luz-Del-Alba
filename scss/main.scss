@@ -10,12 +10,11 @@ main {
         border-top: $borde;
         display: grid;
         grid-template-columns: 3fr 1fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr ;
         grid-template-areas: "articulo-1 clima"
                              "articulo-2 noticias"
                              "articulo-3 noticias"
-                             "articulo-4 noticias"
-                             "anuncios .";
+                             "articulo-4 noticias";
         .articulo-1 {
             border-bottom: $borde;
             border-top: $borde;
@@ -39,7 +38,7 @@ main {
             }
 
             p {
-                font-size: 1.5em;
+                font-size: $p-size;
                 text-align: center;
             }
             .link {
@@ -106,8 +105,58 @@ main {
         }
     }
         .anuncios {
-            grid-area: anuncios;
-            flex-direction: row;
+            cursor: pointer;
+            margin-top: 0.5em;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "mucama delivery ovni";
+            .mucama {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: map-get($orden, $key: orden1 );
+                grid-area: mucama;
+                p {
+                   font-size: $p-size; 
+                }
+                img {
+                    width: $img-width-2;
+                }
+            }
+            .delivery {
+                border-right: $borde;
+                border-left: $borde;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: map-get($orden, $key: orden1 );
+                grid-area: delivery;
+                p {
+                    font-size: $p-size;
+                }
+                img {
+                    width: $img-width-2;
+                }
+            }
+            .ovni {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: map-get($orden, $key: orden1 );
+                grid-area: ovni;
+                img {
+                    width: $img-width-2;
+                }
+                p {
+                    font-size: $p-size;
+                }
+            }
         }
+    }
+    footer {
+        
+        font-size: $title-size;
+        text-align: center;
     }
     

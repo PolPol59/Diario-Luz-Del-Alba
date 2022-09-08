@@ -33,8 +33,8 @@ main {
     border-top: 5px solid black;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-    grid-template-areas: "articulo-1 clima" "articulo-2 noticias" "articulo-3 noticias" "articulo-4 noticias" "anuncios ."; }
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "articulo-1 clima" "articulo-2 noticias" "articulo-3 noticias" "articulo-4 noticias"; }
     main section .articulo-1, main section .articulo-2, main section .articulo-4, main section .articulo-3 {
       border-bottom: 5px solid black;
       border-top: 5px solid black;
@@ -99,5 +99,45 @@ main {
         text-align: center;
         cursor: pointer; }
   main .anuncios {
-    grid-area: anuncios;
-    flex-direction: row; }
+    cursor: pointer;
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "mucama delivery ovni"; }
+    main .anuncios .mucama {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      grid-area: mucama; }
+      main .anuncios .mucama p, main .anuncios .mucama section .articulo-1 .link, main section .articulo-1 .anuncios .mucama .link, main .anuncios .mucama section .articulo-2 .link, main section .articulo-2 .anuncios .mucama .link, main .anuncios .mucama section .articulo-4 .link, main section .articulo-4 .anuncios .mucama .link, main .anuncios .mucama section .articulo-3 .link, main section .articulo-3 .anuncios .mucama .link {
+        font-size: 1.5em; }
+      main .anuncios .mucama img {
+        width: 15em; }
+    main .anuncios .delivery {
+      border-right: 5px solid black;
+      border-left: 5px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      grid-area: delivery; }
+      main .anuncios .delivery p, main .anuncios .delivery section .articulo-1 .link, main section .articulo-1 .anuncios .delivery .link, main .anuncios .delivery section .articulo-2 .link, main section .articulo-2 .anuncios .delivery .link, main .anuncios .delivery section .articulo-4 .link, main section .articulo-4 .anuncios .delivery .link, main .anuncios .delivery section .articulo-3 .link, main section .articulo-3 .anuncios .delivery .link {
+        font-size: 1.5em; }
+      main .anuncios .delivery img {
+        width: 15em; }
+    main .anuncios .ovni {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      grid-area: ovni; }
+      main .anuncios .ovni img {
+        width: 15em; }
+      main .anuncios .ovni p, main .anuncios .ovni section .articulo-1 .link, main section .articulo-1 .anuncios .ovni .link, main .anuncios .ovni section .articulo-2 .link, main section .articulo-2 .anuncios .ovni .link, main .anuncios .ovni section .articulo-4 .link, main section .articulo-4 .anuncios .ovni .link, main .anuncios .ovni section .articulo-3 .link, main section .articulo-3 .anuncios .ovni .link {
+        font-size: 1.5em; }
+
+footer {
+  font-size: 2.5em;
+  text-align: center; }

@@ -10,7 +10,7 @@ header {
     }
         nav {
             ul { display: flex;
-                justify-content: space-between;
+                justify-content: map-get($orden, $key:orden2 );
                 flex-direction: row;
                 li {
                     list-style: none;
