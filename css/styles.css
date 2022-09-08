@@ -68,9 +68,17 @@ main {
         justify-content: end;
         cursor: pointer;
         width: 30em; }
-      main section .articulo-2 h1, main section .articulo-4 h1, main section .articulo-2 h2, main section .articulo-4 h2, main section .articulo-2 p, main section .articulo-4 p, main section .articulo-2 .link, main section .articulo-4 .link {
+      main section .articulo-2 h1, main section .articulo-4 h1,
+      main section .articulo-2 h2,
+      main section .articulo-4 h2,
+      main section .articulo-2 p,
+      main section .articulo-4 p,
+      main section .articulo-2 .link,
+      main section .articulo-4 .link {
         text-align: center; }
-      main section .articulo-2 h2, main section .articulo-4 h2 {
+      
+      main section .articulo-2 h2,
+      main section .articulo-4 h2 {
         font-weight: bolder; }
     main section .articulo-3 {
       margin-top: 2em;
