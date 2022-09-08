@@ -26,9 +26,16 @@ header {
 main {
   font-family: "Quicksand", sans-serif;
   padding: 0 1em 0 1em; }
-  main .fecha {
-    padding: 1em 0 1em 0;
-    font-size: 1em; }
+  main .fecha-y-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    main .fecha-y-redes img {
+      width: 3em;
+      cursor: pointer; }
+    main .fecha-y-redes .fecha {
+      padding: 1em 0 1em 0;
+      font-size: 1em; }
   main section {
     border-top: 5px solid black;
     display: grid;

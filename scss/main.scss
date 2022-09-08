@@ -1,12 +1,19 @@
 main {
     font-family: $font;
     padding: 0 1em 0 1em;
-
+    .fecha-y-redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img {
+            width: 3em;
+            cursor: pointer;
+        }
     .fecha {
         padding: $padding;
         font-size: 1em;
     }
-
+}
     section {
         border-top: $borde;
         display: grid;
